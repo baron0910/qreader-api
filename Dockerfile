@@ -1,9 +1,10 @@
 FROM python:3.10-slim
 
 # 安裝系統依賴
+# 注意：libgl1-mesa-glx 在新版 Debian 已被 libgl1 取代
 RUN apt-get update && apt-get install -y \
     libzbar0 \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
